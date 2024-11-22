@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Multi-file class diagram">
+  <ClassDiagramComponents>
+    <Class name="Curso" package="com.main.models" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="id" type="int" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="descripcion" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="id"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="descripcion"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getDescripcion" returnType="String" visibility="public"/>
+        <Method name="setDescripcion" returnType="void" visibility="public">
+          <Argument type="String" name="descripcion"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Estudiante" package="com.main.models" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="id" type="int" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="apellido" type="String" visibility="private"/>
+        <Field name="documentoIdentidad" type="String" visibility="private"/>
+        <Field name="fechaNacimiento" type="Date" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="id"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellido"/>
+          <Argument type="String" name="documentoIdentidad"/>
+          <Argument type="Date" name="fechaNacimiento"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getApellido" returnType="String" visibility="public"/>
+        <Method name="setApellido" returnType="void" visibility="public">
+          <Argument type="String" name="apellido"/>
+        </Method>
+        <Method name="getDocumentoIdentidad" returnType="String" visibility="public"/>
+        <Method name="setDocumentoIdentidad" returnType="void" visibility="public">
+          <Argument type="String" name="documentoIdentidad"/>
+        </Method>
+        <Method name="getFechaNacimiento" returnType="Date" visibility="public"/>
+        <Method name="setFechaNacimiento" returnType="void" visibility="public">
+          <Argument type="Date" name="fechaNacimiento"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Nota" package="com.main.models" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="id" type="int" visibility="private"/>
+        <Field name="estudianteId" type="int" visibility="private"/>
+        <Field name="cursoId" type="int" visibility="private"/>
+        <Field name="nota" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="id"/>
+          <Argument type="int" name="estudianteId"/>
+          <Argument type="int" name="cursoId"/>
+          <Argument type="double" name="nota"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getEstudianteId" returnType="int" visibility="public"/>
+        <Method name="setEstudianteId" returnType="void" visibility="public">
+          <Argument type="int" name="estudianteId"/>
+        </Method>
+        <Method name="getCursoId" returnType="int" visibility="public"/>
+        <Method name="setCursoId" returnType="void" visibility="public">
+          <Argument type="int" name="cursoId"/>
+        </Method>
+        <Method name="getNota" returnType="double" visibility="public"/>
+        <Method name="setNota" returnType="void" visibility="public">
+          <Argument type="double" name="nota"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="NotaDAO" package="com.main.dao" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="obtenerNotas" returnType="List&lt;Nota&gt;" visibility="public"/>
+        <Method name="agregarNota" returnType="void" visibility="public">
+          <Argument type="Nota" name="nota"/>
+        </Method>
+        <Method name="actualizarNota" returnType="void" visibility="public">
+          <Argument type="Nota" name="nota"/>
+        </Method>
+        <Method name="eliminarNota" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="EstudianteDAO" package="com.main.dao" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="obtenerEstudiantes" returnType="List&lt;Estudiante&gt;" visibility="public"/>
+        <Method name="agregarEstudiante" returnType="void" visibility="public">
+          <Argument type="Estudiante" name="estudiante"/>
+        </Method>
+        <Method name="actualizarEstudiante" returnType="void" visibility="public">
+          <Argument type="Estudiante" name="estudiante"/>
+        </Method>
+        <Method name="eliminarEstudiante" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="CursoDAO" package="com.main.dao" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="obtenerCursos" returnType="List&lt;Curso&gt;" visibility="public"/>
+        <Method name="agregarCurso" returnType="void" visibility="public">
+          <Argument type="Curso" name="curso"/>
+        </Method>
+        <Method name="actualizarCurso" returnType="void" visibility="public">
+          <Argument type="Curso" name="curso"/>
+        </Method>
+        <Method name="eliminarCurso" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="DatabaseConnection" package="com.main" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields>
+        <Field name="URL" type="String" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="USER" type="String" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="PASSWORD" type="String" visibility="private" isStatic="true" isFinal="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getConnection" returnType="Connection" visibility="public" isStatic="true"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="com.main.dao.EstudianteDAO" target="com.main.models.Estudiante" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.main.dao.CursoDAO" target="com.main.models.Curso" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.main.dao.NotaDAO" target="com.main.models.Nota" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
